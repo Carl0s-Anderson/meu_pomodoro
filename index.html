@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <style>
+        body {
+            background-image: url('fts/img_fundo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #timer {
+            font-size: 48px;
+            color: rgb(21, 116, 79); /* Deixe o texto visível sobre o fundo */
+        }
+        button {
+            background-color: #4CAF50;
+            color: rgb(97, 59, 8); /* Cor do texto (branco) */
+            border: none; /* Remove bordas */
+            padding: 15px 32px; /* Espaçamento interno */
+            text-align: center; /* Centraliza o texto */
+            display: inline-block;
+            font-size: 16px; /* Tamanho do texto */
+            margin: 5px 10px; /* Margens */
+            cursor: crosshair; /* Cursor de mira ao passar o mouse */
+            border-radius: 12px; /* Cantos arredondados */
+            transition: background-color 0.3s ease; /* Transição suave de 0.3 segundos */
+}
+        button:hover {
+            background-color: #19a8cc; /* Cor ao passar o mouse */
+        }
+        button#startBreak:hover {
+            background-color: #964b00; /* Cor ao passar o mouse no intervalo */
+            box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div id="timer">25:00</div>
+    <button id="startPomodoro">Iniciar Pomodoro</button>
+    <button id="startBreak">Iniciar Intervalo</button>
+    <button id="reset">Reiniciar</button>
+    <div>
+        <label for="pomodoroTime">Duração do Pomodoro (min):</label>
+        <input type="number" id="pomodoroTime" value="25">
+    </div>
+    <div>
+        <label for="breakTime">Duração do Intervalo (min):</label>
+        <input type="number" id="breakTime" value="5">
+    </div>
+    <div id="timer">25:00</div>
+    <div id="sessionHistoryContainer">
+        <h2>Histórico de Sessões</h2>
+        <ul id="sessionHistoryList"></ul>
+    </div>    
+    <button id="clearHistory">Zerar Histórico</button>
+     
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
